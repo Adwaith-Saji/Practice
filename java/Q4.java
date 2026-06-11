@@ -1,4 +1,3 @@
-package modelQues;
 class Shared {
     int n=1;
 
