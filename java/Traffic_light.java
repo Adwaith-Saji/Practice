@@ -43,13 +43,13 @@ public class Traffic_light extends JFrame implements ActionListener {
         y.addActionListener(this);
         g.addActionListener(this);
 
-        JPanel buttoPanel=new JPanel();
-        buttoPanel.add(r);
-        buttoPanel.add(y);
-        buttoPanel.add(g);
+        JPanel buttonPanel=new JPanel();
+        buttonPanel.add(r);
+        buttonPanel.add(y);
+        buttonPanel.add(g);
 
         add(lightPanel,BorderLayout.CENTER);
-        add(buttoPanel,BorderLayout.SOUTH);
+        add(buttonPanel,BorderLayout.SOUTH);
 
         setVisible(true);
     }
