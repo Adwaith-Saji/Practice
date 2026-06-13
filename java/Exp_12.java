@@ -3,7 +3,7 @@ import java.util.Random;
 class GenerateNumber extends Thread{
     public void run(){
         Random r=new Random();
-        int n=r.nextInt();
+        int n=r.nextInt(100);
 
         if(n%2==0){
             EvenThread t1=new EvenThread(n);
@@ -21,7 +21,7 @@ class EvenThread extends Thread{
         this.n=n;
     }
     public void run(){
-        System.out.println("Even Thread : "+n*n);
+        System.out.println("Even Thread : "+(n*n));
     }
 }
 class OddThread extends Thread{
@@ -30,7 +30,7 @@ class OddThread extends Thread{
         this.n=n;
     }
     public void run(){
-        System.out.println("Odd Thread : "+n*n*n);
+        System.out.println("Odd Thread : "+(n*n*n));
     }
 }
 
