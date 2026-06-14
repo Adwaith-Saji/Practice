@@ -18,7 +18,7 @@ public class Extra5_GUI extends JFrame implements ActionListener{
         setLayout(new FlowLayout());
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        l=new JLabel("Guess a number(1-100");
+        l=new JLabel("Guess a number(1-100)");
         t=new JTextField(10);
         b=new JButton("CHECK");
 
