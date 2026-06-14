@@ -1,10 +1,11 @@
-import java.util.Scanner;
+import java.util.*;
 
 class GenerateThread extends Thread{
     public void run() {
 
         Scanner sc=new Scanner(System.in);
-        int n = (int)(Math.random() * 100) + 1;
+        Random r=new Random();
+        int n = r.nextInt(100);
         System.out.println("Generated number: " + n);
 
         if (n%2==0){

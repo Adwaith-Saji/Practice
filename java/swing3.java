@@ -28,11 +28,10 @@ public class swing3 extends JFrame implements ActionListener {
                 jlab.setText("CANCEL pressed");
         }
         public static void main(String args[]){
-            SwingUtilities.invokeLater(new Runnable() {
-                public void run(){
+
                     new swing3();
                 }
-            });
-        }
+        
+}   
     
-}
+
