@@ -5,7 +5,7 @@ class GenerateThread extends Thread{
 
         Scanner sc=new Scanner(System.in);
         Random r=new Random();
-        int n = r.nextInt(100);
+        int n = r.nextInt(100)+1;
         System.out.println("Generated number: " + n);
 
         if (n%2==0){
