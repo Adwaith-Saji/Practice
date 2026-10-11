@@ -12,11 +12,9 @@ public class Server_2 {
         Socket s = ss.accept();
         System.out.println("Client connected.");
 
-        BufferedReader in = new BufferedReader(
-            new InputStreamReader(s.getInputStream()));
+        BufferedReader in = new BufferedReader(new InputStreamReader(s.getInputStream()));
 
-        PrintWriter out = new PrintWriter(
-            s.getOutputStream(), true);
+        PrintWriter out = new PrintWriter(s.getOutputStream(), true);
 
         String msg;
 
