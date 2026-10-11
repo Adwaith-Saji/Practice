@@ -22,7 +22,7 @@ public class Server1a {
         out2.writeChar(result);
         out2.flush();
 
-        System.out.println("Senr : "+result);
+        System.out.println("Sent : "+result);
 
         out2.close();
         in1.close();
