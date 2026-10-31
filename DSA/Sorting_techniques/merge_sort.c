@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 void merge(int a[], int temp[], int left, int mid, int right){
-    
+
     int i = left;
     int j = mid + 1;
     int k = left;
 
-    // Compare and merge both halves
+    // Merge two sorted halves
     while (i <= mid && j <= right)
     {
         if (a[i] <= a[j])
@@ -23,7 +23,7 @@ void merge(int a[], int temp[], int left, int mid, int right){
     while (j <= right)
         temp[k++] = a[j++];
 
-    // Copy sorted elements back to original array
+    // Copy temporary array back to original array
     for (i = left; i <= right; i++)
         a[i] = temp[i];
 }
@@ -32,7 +32,7 @@ void mergeSort(int a[], int temp[], int left, int right){
 
     if (left < right)
     {
-        int mid = left + (right - left) / 2;
+        int mid = (left + right) / 2;
 
         mergeSort(a, temp, left, mid);
         mergeSort(a, temp, mid + 1, right);
@@ -52,13 +52,17 @@ int main(){
 
     printf("Enter elements: ");
     for (i = 0; i < n; i++)
+    {
         scanf("%d", &a[i]);
+    }
 
     mergeSort(a, temp, 0, n - 1);
 
     printf("Sorted array: ");
     for (i = 0; i < n; i++)
+    {
         printf("%d ", a[i]);
+    }
 
     return 0;
 }
